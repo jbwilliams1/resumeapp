@@ -42,6 +42,4 @@ bld/
 
 node_modules/
 
-# SQL Server files
-*.mdf
-*.ldf
+.vs/
