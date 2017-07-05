@@ -1,0 +1,19 @@
+{
+  "name": "ResumeApp",
+  "version" : "1.0.0",
+  "email" : "jbwilliams1@gmail.com",
+  "description" : "A fun little project in ASP.NET Core",
+  "dependencies" : {
+    "angular"     : "^1.6.4",
+    "angular-ui"  : "^1.0.0",
+    "bootstrap"   : "^3.3.7",
+    "grunt"       : "^1.0.1",
+    "jquery"      : "^3.2.1",
+    "typescript"  : "^2.4.1"
+  },
+  "license" : "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jbwilliams1/resumeapp"
+  }
+}
