@@ -40,6 +40,10 @@ bld/
 *.svclog
 *.scc
 
+src/ResumeApp/appsettings.Development.json
+src/ResumeApp/appsettings.Production.json
+src/ResumeApp/appsettings.json
+
 node_modules/
 
 .vs/
