@@ -31,7 +31,7 @@ namespace ResumeApp
         {
             // Add framework services.
             services.AddMvc();
-            
+            services.AddEntityFrameworkNpgsql().AddDbContext<ResumeContext>(options => options.UseNpgsql(Configuration.GetConnectionString("ResumeDatabase")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
