@@ -44,6 +44,17 @@ namespace ResumeApp
             {
                 app.UseDeveloperExceptionPage();
                 app.UseBrowserLink();
+
+                
+                // EF database seeding!
+                using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+                {
+                    var dbContext = serviceScope.ServiceProvider.GetService<ResumeContext>();       
+                    dbContext.Database.Migrate();
+                
+                    // Attempt at seeding in  EF 1.1
+                    ResumeExtensions.EnsureSeedData(dbContext);
+                }
             }
             else
             {
