@@ -25,12 +25,5 @@ namespace ResumeApp.Controllers
         {        
             return View();
         }
-
-        [HttpGet]
-        public JsonResult GetEmployeeResume(int EmployeeID)
-        {
-            
-
-        }
     }
 }
