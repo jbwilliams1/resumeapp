@@ -1,7 +1,32 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "My Resume";
 }
 
-<div class="home-container container">
-Well hello there!
+<div ng-controller="ResumeController as resume" class="home-container container">
+    <h3 class="text-center" ng-if="loading">Loading!</h3>
+
+    <div ng-if="employee" class="employee-box">
+        <div class="jumbotron col-md-12 text-center">
+            <h1>{{employee.firstName}} {{employee.lastName}}'s Resume</h1>
+        </div>
+        <div class="col-md-6 col-xs-12 text-center">
+        {{employee.firstName}} {{employee.lastName}} <br>
+        {{employee.phone}} <br>
+        {{employee.city}}, {{employee.state}} <br>
+        </div>
+        <p class="col-md-6 col-xs-12" ng-bind-html="employee.biography"></p>
+        <div class="clearfix"></div>
+        <div class="col-md-6 col-xs-12 text-center">
+            <h2>Skills</h2>
+            <ul class="skills-list list-unstyled">
+                <li ng-repeat="s in skills">{{s.name}}</li>
+            </ul>
+        </div>
+        <div ng-if="jobs" class="col-md-6 col-xs-12 text-center">
+            <h2>Jobs</h2>
+            <ul class="jobs-list list-unstyled">
+                <li ng-repeat="j in jobs">{{j.title}}</li>
+            </ul>
+        </div>
+    </div>
 </div>
