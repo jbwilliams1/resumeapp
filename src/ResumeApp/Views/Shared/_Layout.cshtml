@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
 
-    <environment names="Development">
-        <link rel="stylesheet" href="~/css/site.less" />
+    <environment names="Development,Staging,Production">
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/site.css" />
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     </environment>
-    <environment names="Staging,Production">
-      <link rel="stylesheet" href="~/css/site.css" />
-    </environment>
+        <script src="js/site.min.js"></script>
 </head>
-<body>
+<body ng-app="resumeApp">
     @RenderBody()
 
     @RenderSection("Scripts", required: false)
