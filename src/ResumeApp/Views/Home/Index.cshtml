@@ -7,7 +7,7 @@
 
     <div ng-if="employee" class="employee-box">
         <div class="jumbotron col-md-12 text-center">
-            <h1>{{employee.firstName}} {{employee.lastName}}'s Resume</h1>
+            <h1>{{employee.firstName}} {{employee.lastName}}' Resume</h1>
         </div>
         <div class="col-md-6 col-xs-12 text-center">
         {{employee.firstName}} {{employee.lastName}} <br>
@@ -24,8 +24,8 @@
         </div>
         <div ng-if="jobs" class="col-md-6 col-xs-12 text-center">
             <h2>Jobs</h2>
-            <ul class="jobs-list list-unstyled">
-                <li ng-repeat="j in jobs">{{j.title}}</li>
+            <ul style="margin: 0 auto;" class="jobs-list list-unstyled text-left">
+                <li ng-repeat="j in jobs"><strong>{{j.companyName}}</strong> <i class="fa fa-caret-right"></i> {{j.title}}</li>
             </ul>
         </div>
     </div>
