@@ -1,7 +1,7 @@
 # Resume App
 
 ## Introduction
-This is just a small application employing a variety of technologies commonly found in a .NET Core MVC application built for the purposes of 
+This is just a small application employing a variety of technologies commonly found in a .NET Core MVC application built for the purposes of having a working .NET/C# code sample! 
 
 ## Technology Used
 
