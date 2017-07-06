@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using ResumeApp.Data;
+using Microsoft.AspNetCore.HttpOverrides;
 
 namespace ResumeApp
 {
@@ -59,6 +60,10 @@ namespace ResumeApp
             }
             else
             {
+                app.UseForwardedHeaders(new ForwardedHeadersOptions
+                {
+                    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+                });
                 app.UseExceptionHandler("/Home/Error");
             }
 
